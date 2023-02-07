@@ -6,15 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Code Prime - Your Coding AI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href = "K:\fontawesome\-free-5.14.0-web\fontawesome-free-5.14.0-web\css\all.min.css">
   </head>
   <body>
     <div id="app">
       <div id="chat_container"></div>
       <form>
-        <textarea name="prompt" cols="1" rows="1" placeholder="Ask Code Prime..."></textarea>
+        <textarea id="speechToText" name="prompt" cols="1" rows="1" onclick=record() type="text" placeholder="Ask Code Prime..."></textarea>
         <button type="Submit"><img src="assets/send.svg" /></button>
+        <!-- <button type ="submit"><i class="fas fa-microphone"></i></buttton> -->
+          <script>
+            function record() {
+                var recognition = new webkitSpeechRecognition();
+                recognition.lang = "en-GB";
+    
+                recognition.onresult = function(event) {
+                    // console.log(event);
+                    document.getElementById('speechToText').value = event.results[0][0].transcript;
+                }
+                recognition.start();
+    
+            }
+        </script>  
       </form>
     </div>
+    
     <script type="module" src="script.js"></script>
   </body>
 </html>
