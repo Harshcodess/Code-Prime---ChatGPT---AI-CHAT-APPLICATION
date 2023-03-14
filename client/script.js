@@ -86,6 +86,7 @@ const handleSubmit = async (e) => {
   // messageDiv.innerHTML = "..."
   loader(messageDiv);
 
+<<<<<<< HEAD
   const response = await fetch("http://localhost:5000/", {
     method: "POST",
     headers: {
@@ -95,6 +96,17 @@ const handleSubmit = async (e) => {
       prompt: data.get("prompt"),
     }),
   });
+=======
+    const response = await fetch('https://code-prime-2.onrender.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            prompt: data.get('prompt')
+        })
+    })
+>>>>>>> 9073546f0cf8497a213a5fc2e0864ad91432ed86
 
   clearInterval(loadInterval);
   messageDiv.innerHTML = " ";
@@ -117,6 +129,7 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e);
     }
 })
+<<<<<<< HEAD
 
 // function displayTime() {
 //   var dateTime = new Date();
@@ -140,3 +153,5 @@ form.addEventListener('keyup', (e) => {
 //   document.getElementById("seconds").innerHTML = sec;
 // }
 // setInterval(displayTime, 10);
+=======
+>>>>>>> 9073546f0cf8497a213a5fc2e0864ad91432ed86
