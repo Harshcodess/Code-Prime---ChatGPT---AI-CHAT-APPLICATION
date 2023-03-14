@@ -128,13 +128,14 @@ textarea {
   width: 100%;
 
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
 
   padding: 10px;
   background: transparent;
   border-radius: 5px;
   border: none;
   outline: none;
+  position: sticky;
 }
 
 button {
@@ -148,3 +149,18 @@ form img {
   width: 30px;
   height: 30px;
 }
+
+/* .container{
+  font-family: "Arial", Helvetica, sans-serif;
+  padding: 30px;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 100%;
+  right: 4%;
+  bottom: 4%;
+  left: 100%;
+  transform: translate(50%, -50%);
+  font-size: 12px;
+  white-space: nowrap;
+} */
